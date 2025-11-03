@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Piyush Prateek — Portfolio</title>
+  <meta name="description" content="Portfolio of Piyush Prateek — AI/ML, Trading, Data Analytics" />
+  <!-- All styling is now inside this <style> tag -->
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1720;
+      --muted:#9aa6b2;
+      --accent:#2b7cff;
+      --heading: #00c1ff; /* Bright Cyan */
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --shadow: 0 6px 18px rgba(2,6,23,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,var(--bg),#071018);color:#e6eef6;line-height:1.5}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:12px;overflow:hidden;flex:0 0 120px;border:2px solid rgba(255,255,255,0.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:28px; color: var(--heading);}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px; transition: background 0.2s, color 0.2s;}
+    .btn:hover{background:rgba(255,255,255,0.02);color:var(--accent)}
+    .grid{margin-top:28px} /* Pehle yahaan display:grid tha, use hata diya hai */
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03); margin-bottom: 22px;}
+    .skills li, .achievements li, .certifications li {margin-bottom:8px;color:var(--muted); list-style-type: none; padding-left: 0;}
+    .section-title{font-size:18px;margin:0 0 12px;color:var(--heading);}
+    .project{margin-bottom:14px}
+    .project h4{margin:0 0 6px; color: var(--heading);}
+    #skills h4 { color: var(--heading); }
+    footer{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    a.link{color:var(--accent);text-decoration:none}
+    pre.code{background:var(--glass-2);padding:10px;border-radius:8px;color:var(--muted);overflow:auto}
+    /* responsive */
+    @media (max-width:880px){ 
+      /* .grid{grid-template-columns:1fr;} <-- Yahaan se grid rule hata diya */
+      .avatar{width:96px;height:96px; flex: 0 0 96px;} 
+      .topbar{flex-direction: column; align-items: flex-start; gap: 16px;}
+      .topbar-right {text-align: left !important; margin-top: 10px;}
+    }
+    .topbar{display:flex;justify-content:space-between;align-items:center}
+    .contact-list{display:flex;gap:10px;flex-wrap:wrap}
+    .download{background:linear-gradient(90deg,var(--accent),#6fb1ff);color:#041025;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .muted-small{color:var(--muted);font-size:13px}
+    .tag{display:inline-block;background:rgba(43,124,255,0.12);color:var(--accent);padding:6px 9px;border-radius:999px;margin-right:8px;font-size:13px; margin-bottom: 6px; text-decoration: none;}
+    .project-meta{color:var(--muted);font-size:13px;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div style="display:flex;gap:18px;align-items:center">
+        <!-- 
+          Path to photo. Assumes 'piyush prof.jpg' is in the same folder.
+        -->
+        <div class="avatar"><img src="piyush prof.jpg" alt="Piyush Prateek" onerror="this.style.display='none'"></div>
+        <div>
+          <h1>Piyush Prateek</h1>
+          <p class="lead">Economics Graduate & MCA Student • AI Enthusiast • Trading Strategy Developer</p>
+          <div style="margin-top:8px" class="contact-list muted-small">
+            <div>📞 +91-6206441351</div>
+            <div>📧 <a class="link" href="mailto:piyushprateek001@gmail.com">piyushprateek001@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="topbar-right" style="text-align:right">
+        <!-- 
+          Link updated to match the uploaded filename 'Piyush_Prateek_Resume.pdf.pdf'
+        -->
+        <a class="download" href="Piyush_Prateek_Resume.pdf.pdf" download>Download Resume</a>
+        <div style="margin-top:8px" class="muted-small">Blog: Coming Soon</div>
+      </div>
+    </div>
+
+    <nav style="margin-top:18px">
+      <a class="btn" href="#about">About</a>
+      <a class="btn" href="#skills">Skills</a>
+      <a class="btn" href="#projects">Projects</a>
+      <a class="btn" href="#experience">Experience</a>
+      <a class="btn" href="#achievements">Achievements</a>
+      <a class="btn" href="https://www.linkedin.com/in/piyushprateek" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/piyuhprateek001-del" target="_blank">GitHub</a>
+    </nav>
+
+    <div class="grid">
+      <main>
+        <section id="about" class="card">
+          <h3 class="section-title">About Me</h3>
+          <p>Hi, I’m <strong>Piyush Prateek</strong>. I'm an Economics graduate currently pursuing my MCA.</p>
+          <p>I’m passionate about the intersection of technology, finance, and data analytics. With a deep interest in trading and problem-solving, I love exploring how AI can enhance financial decision-making and create efficient, data-driven solutions.</p>
+          <p class="muted-small">I believe in continuous learning and building projects that combine logic, creativity, and impact.</p>
+        </section>
+
+        <section id="projects" class="card">
+          <h3 class="section-title">Projects</h3>
+
+          <div class="project">
+            <h4>Custom Technical Scanners (Chartink)</h4>
+            <div class="project-meta">Tech: Chartink Scripting · Technical Analysis</div>
+            <p class="muted-small">Designed and built multiple custom scanners on the Chartink platform to identify real-time trading opportunities based on specific technical analysis criteria. Focus on breakout patterns, volume analysis, and momentum indicators.</p>
+            
+            <div style="margin-top: 12px;">
+              <h5 style="font-size: 14px; color: var(--muted); margin-bottom: 8px;">My Chartink Screeners:</h5>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="https://chartink.com/screener/copy-inside-bar-1091" target="_blank" class="btn">Inside Bar</a>
+                <a href="https://chartink.com/screener/pivots-bullish-1" target="_blank" class="btn">Pivots Bullish 1</a>
+                <a href="https://chartink.com/screener/pivots-bullish" target="_blank" class="btn">Pivots Bullish 2</a>
+                <a href="https://chartink.com/screener/ema-bulls" target="_blank" class="btn">EMA Bulls</a>
+                <a href="https://chartink.com/screener/30m-orb-1" target="_blank" class="btn">30m ORB</a>
+                <a href="https://chartink.com/screener/idnr4-2" target="_blank" class="btn">ID/NR4</a>
+                <a href="https://chartink.com/screener/bull-hook-16" target="_blank" class="btn">Bull Hook</a>
+                <a href="https://chartink.com/screener/copy-bear-hook-1" target="_blank" class="btn">Bear Hook</a>
+                <a href="https://chartink.com/screener/copy-inside-day-94" target="_blank" class="btn">Inside Day</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="project">
+            <h4>Trading Strategy Backtester (Pine Script)</h4>
+            <div class="project-meta">Tech: Pine Script · TradingView</div>
+            <p class="muted-small">Designed and tested automated trading strategies using TradingView’s Pine Script. Conducted both backtesting and forward testing to measure performance under different market conditions. Focus on risk control, stop-loss optimization, and ROI analysis.</p>
+          </div>
+        </section>
+
+        <section id="experience" class="card">
+          <h3 class="section-title">Experience</h3>
+          <div class="project">
+            <h4>DM Plant Supervisor (2023–2025)</h4>
+            <div class="project-meta">At AMNS India (via Ion Exchange contract)</div>
+            <p class="muted-small">Supervised and managed daily operations of the Demineralization (DM) Plant. Performed process analysis of the DM Plant from Clarified Water to DM Storage, focusing on pH, conductivity, and silica control. Implemented optimized acid dosing and degasser monitoring to improve water quality and reduce chemical use by ~12%. Achieved stable conductivity (<1 µS/cm) and silica levels (<20 ppb) through data-driven operational improvements.</p>
+          </div>
+        </section>
+
+        <section id="achievements" class="card">
+          <h3 class="section-title">Achievements</h3>
+          <ul class="achievements">
+            <li>🏅 Zonal Topper – International Mathematics Olympiad (Int'l Rank 310)</li>
+            <li>📊 CAT 2024 – 96 Percentile</li>
+            <li>📈 XAT 2025 – 99 Percentile</li>
+            <li><a href="Certificate of Excellence (1).pdf" target="_blank" class="link">📚 Top 15% – Indian Business Quiz</a></li>
+            <li><a href="Birla certificate.jpg" target="_blank" class="link">🏆 Participant – Mock Shark Tank, Interface-2022 (BITS, Pilani)</a></li>
+            <li><a href="Hackathon_certificate.pdf" target="_blank" class="link">✨ Innovator Award – AI Hackathon (Build Storm 2025)</a></li>
+          </ul>
+        </section>
+
+        <section id="blog" class="card">
+          <h3 class="section-title">Blog & Digital Presence</h3>
+          <p class="muted-small"><strong>Blog (Coming Soon):</strong> I plan to share articles on stock market psychology, AI applications in finance, and productivity tips.</p>
+          <p class="muted-small" style="margin-top: 8px;"><strong>YouTube (Future Project):</strong> Simplifying trading concepts and personal growth lessons.</p>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card" id="skills">
+          <h3 class="section-title">Skills & Technologies</h3>
+          
+          <div style="margin-bottom:10px">
+            <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" class="tag">Python</a><a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank" class="tag">Machine Learning</a><a href="https://en.wikipedia.org/wiki/Pine_Script" target="_blank" class="tag">Pine Script</a><a href="https://en.wikipedia.org/wiki/SQL" target="_blank" class="tag">SQL</a><a href="https://en.wikipedia.org/wiki/Pandas_(software)" target="_blank" class="tag">Pandas</a><a href="https://en.wikipedia.org/wiki/Microsoft_Excel" target="_blank" class="tag">Excel</a>
+          </div>
+          
+          <h4 style="margin-top:6px">Programming</h4>
+          <ul class="skills">
+            <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" class="link">Python</a> (Beginner)</li>
+            <li><a href="https://en.wikipedia.org/wiki/SQL" target="_blank" class="link">SQL</a> (Beginner)</li>
+            <li><a href="https://en.wikipedia.org/wiki/Pine_Script" target="_blank" class="link">Pine Script</a> (Intermediate)</li>
+          </ul>
+          
+          <h4 style="margin-top:8px">AI & Data</h4>
+          <ul class="skills">
+            <li><a href="https://en.wikipedia.org/wiki/Machine_learning_algorithm" target="_blank" class="link">Machine Learning Algorithms</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Data_cleansing" target="_blank" class="link">Data Cleaning</a> & <a href="https://en.wikipedia.org/wiki/Data_visualization" target="_blank" class="link">Visualization</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Project_Jupyter" target="_blank" class="link">Jupyter</a>, <a href="https://en.wikipedia.org/wiki/Scikit-learn" target="_blank" class="link">Scikit-learn</a>, <a href="https://en.wikipedia.org/wiki/Pandas_(software)" target="_blank" class="link">Pandas</a></li>
+          </ul>
+
+          <h4 style="margin-top:8px">Tools & Finance</h4>
+          <ul class="skills">
+            <li><a href="https://en.wikipedia.org/wiki/Microsoft_Excel" target="_blank" class="link">Excel</a> (Advanced)</li>
+            <li><a href="https://en.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" class="link">VS Code</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Technical_analysis" target="_blank" class="link">Technical</a> & <a href="https://en.wikipedia.org/wiki/Fundamental_analysis" target="_blank" class="link">Fundamental Analysis</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Backtesting" target="_blank" class="link">Backtesting</a> & <a href="https://en.wikipedia.org/wiki/Risk_management" target="_blank" class="link">Risk Control</a></li>
+          </ul>
+        </div>
+
+        <div class="card" id="certifications">
+            <h3 class="section-title">Certifications & Courses</h3>
+            <ul class="certifications">
+              <li><a href="AI_Workshop_certificate (1).pdf" target="_blank" class="link">AI Workshop (Build Storm 2025)</a></li>
+              <li><a href="Web_Development_certificate (2).pdf" target="_blank" class="link">Web Dev Workshop (Build Storm 2025)</a></li>
+            </ul>
+        </div>
+
+        <div class="card" id="contact">
+          <h3 class="section-title">Contact</h3>
+          <p class="muted-small">📞 +91-6206441351</p>
+          <p class="muted-small">📧 <a class="link" href="mailto:piyushprateek001@gmail.com">piyushprateek001@gmail.com</a></p>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <a class="btn" href="https://www.linkedin.com/in/piyushprateek" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://github.com/piyushprateek001-del" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div>© 2025 Piyush Prateek</div>
+      <div class="muted-small">Design Template Provided by User</div>
+    </footer>
+  </div>
+</body>
+</html>
